@@ -2,7 +2,11 @@
 const spotAnimalButtons = document.querySelectorAll(".big-five-list-item")
 
 // Remove the First button
-const removeTheFirstButton = document.querySelector(".remove-first-item-button")
+const removeTheFirstButton = document.getElementById("remove-first-item-button")
+
+
+// Remove all button
+const removeAllButton = document.getElementById("remove-all-button")
 
 // parent
 const listOfSpottedAnimals = document.querySelector("#spotted-animals-list");
@@ -18,14 +22,27 @@ const clickButton = spotAnimalButtons.forEach(button => {
         listOfSpottedAnimals.appendChild(newLi);
         // Stop de text in het kind
         newLi.innerHTML = button.textContent;
-        console.log(button);
+
     })
 })
 
-console.log(removeTheFirstButton)
+// console.log(removeTheFirstButton)
 
-removeTheFirstButton.addEventListener("click", () => {
-    console.log("hoera")
-    const lastChild = listOfSpottedAnimals.querySelector("li")[0];
+const removedAnimals = removeTheFirstButton.addEventListener("click", () => {
+    const lastChild = listOfSpottedAnimals.getElementsByTagName("li")[0];
     const firstRemoved = listOfSpottedAnimals.removeChild(lastChild);
+})
+
+console.log(listOfSpottedAnimals)
+
+removeAllButton.addEventListener("click", () => {
+    listOfSpottedAnimals.childElementCount
+    console.log(listOfSpottedAnimals)
+    for (let i = 0; i < listOfSpottedAnimals.childElementCount; i++) {
+        const lastChild = listOfSpottedAnimals.getElementsByTagName("li")[i];
+        console.log(lastChild)
+        const childsRemoved = listOfSpottedAnimals.removeChild(lastChild);
+    }
+
+
 })
