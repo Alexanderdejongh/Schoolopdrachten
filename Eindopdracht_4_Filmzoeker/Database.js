@@ -433,14 +433,14 @@ const movies = [{
 const niewsteFilms = movies.filter((movie) => movie.Year <= 2014);
 
 function searchForFilms(name) {
-    const index = movies.find((movie) => {
-        return movie.Title === name;
+    const foundMovies = movies.filter((movie) => {
+        return movie.Title == name;
     });
     console.log(index);
-    return index;
+    return foundMovies;
 }
 
-console.log(searchForFilms("Avengers"));
+console.log(searchForFilms("The Avengers"));
 
 document.querySelector(".filmzoeker").innerHTML = `
 <h1 class="filmzoekerTitle">Filmzoeker</h1>
@@ -491,7 +491,8 @@ ${niewsteFilms.map(addContent).join("")}
     addMovieNumber(niewsteFilms);
 });
 
-const avengersFilm = movies.find((movie) => movie.Title == "The Avengers");
+// const avengersFilm = movies.find((movie) => movie.Title == "Avengers");
+// console.log(avengersFilm);
 
 // als je op Filmzoeker klikt ga je naar de Homepage
 const getHomeButton = document.querySelector(".filmzoekerTitle");
