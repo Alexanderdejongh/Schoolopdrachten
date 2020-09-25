@@ -3,9 +3,6 @@ function searchForFilms(name) {
     return movies.filter((movie) => movie.Title.includes(name));
 }
 
-// console.log(movies.filter((movie) => movie.Title.includes("Av")));
-// console.log(searchForFilms("Av"));
-
 document.querySelector(".filmzoeker").innerHTML = `
 <h1 class="filmzoekerTitle">Filmzoeker</h1>
 <ul class="FilmCategorieen">
@@ -16,10 +13,10 @@ document.querySelector(".filmzoeker").innerHTML = `
     <li id="batmanFilm"><a class="button" href="#">Batman</a></li>
 </ul>
 <div class="userInputBox">
-    <input type="text" id=userInput>
-    
+    <input type="text" id=userInput placeholder="Search for movies(Case sensitive)">
 </div>
 `;
+
 /*<input type="submit" id=userClick>*/
 function addMovieNumber(movie) {
     document.querySelector(".filmsTitle").innerHTML = `
@@ -51,15 +48,6 @@ function addContent(movie) {
 </div> `;
 }
 
-// elementByIdFunction("newFilm", niewsteFilms);
-
-// Ik moet de herhaling van deze code nog comprimeren...
-// element en eventlistener
-
-const elementByIdFunction = (Id, func) => {
-    document.getElementById(Id).addEventListener("click", func);
-};
-
 const changeInnerHTML = (filter) => {
     document.querySelector(".filmsContainer").innerHTML = `
 ${filter.map(addContent).join("")}
@@ -69,53 +57,33 @@ ${filter.map(addContent).join("")}
 
 // New Movies
 const niewsteFilms = movies.filter((movie) => movie.Year <= 2014);
-
-`${elementByIdFunction("newFilm", changeInnerHTML(niewsteFilms))}`;
-// opgeschoonde functie
 const newFilm = document.getElementById("newFilm");
-// const clickNewFilm = newFilm.addEventListener("click", changeInnerHTML(niewsteFilms));
-
 const clickNewFilms = newFilm.addEventListener("click", () => {
-    document.querySelector(".filmsContainer").innerHTML = `
-${niewsteFilms.map(addContent).join("")}
-`;
-    addMovieNumber(niewsteFilms);
+    changeInnerHTML(niewsteFilms);
 });
 
 // Avengers
 const avengersFilm = document.getElementById("avengersFilm");
 const clickAvengersFilm = avengersFilm.addEventListener("click", () => {
-    document.querySelector(".filmsContainer").innerHTML = `
-${searchForFilms("Av").map(addContent).join("")}
-`;
-    addMovieNumber(searchForFilms("Av"));
+    changeInnerHTML(searchForFilms("Av"));
 });
 
 // X-Men
 const xmenFilm = document.getElementById("xManFilm");
 const clickxmenFilm = xmenFilm.addEventListener("click", () => {
-    document.querySelector(".filmsContainer").innerHTML = `
-${searchForFilms("X-M").map(addContent).join("")}
-`;
-    addMovieNumber(searchForFilms("X-M"));
+    changeInnerHTML(searchForFilms("X-M"));
 });
 
 // Princess
 const princessFilm = document.getElementById("princessFilm");
 const clickPrincessFilm = princessFilm.addEventListener("click", () => {
-    document.querySelector(".filmsContainer").innerHTML = `
-${searchForFilms("Princ").map(addContent).join("")}
-`;
-    addMovieNumber(searchForFilms("Princ"));
+    changeInnerHTML(searchForFilms("Princ"));
 });
 
 // Batman
 const batmanFilm = document.getElementById("batmanFilm");
 const clickBatmanFilm = batmanFilm.addEventListener("click", () => {
-    document.querySelector(".filmsContainer").innerHTML = `
-${searchForFilms("Bat").map(addContent).join("")}
-`;
-    addMovieNumber(searchForFilms("Bat"));
+    changeInnerHTML(searchForFilms("Bat"));
 });
 
 // const avengersFilm = movies.find((movie) => movie.Title == "Avengers");
@@ -127,17 +95,12 @@ const homeButton = getHomeButton.addEventListener("click", () => {
     location.href = "index.html";
 });
 
-//
-// searchForFilms(unerInput)
-
+// searchForFilms(unerInput) Is nog Hoofdletter gevoelig.. (wil nog uitzoeken hoe je dat voor elkaar
+// krijgt met toUpperCase of toLowerCase)
 const userInput = document.getElementById("userInput");
-
 const getUserInput = userInput.addEventListener("input", () => {
     // const value = event.data;
     const value = userInput.value;
     console.log(value);
-    document.querySelector(".filmsContainer").innerHTML = `
-${searchForFilms(value).map(addContent).join("")}
-`;
-    addMovieNumber(searchForFilms(value));
+    changeInnerHTML(searchForFilms(value));
 });

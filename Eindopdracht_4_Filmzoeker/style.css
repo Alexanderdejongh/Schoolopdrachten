@@ -201,8 +201,11 @@ footer {
 
 /* 526px width buttonWidth */
 
-
-/*692px width poster width*/
-
-
-/*1214px width zoek*/
+@media (max-width: 586px) {
+    .FilmCategorieen li {
+        width: 99%;
+    }
+    .button {
+        padding: 9px 70px;
+    }
+}
