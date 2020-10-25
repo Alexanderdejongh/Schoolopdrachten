@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgba(247, 140, 69, 0.377);
+}
+
+.output {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease-in;
+}
+
+button {
+    padding: 20px;
+    letter-spacing: 4px;
+    margin: 10px;
+    border-radius: 15px;
+    color: rgba(248, 155, 92, 0.541);
+    background-color: black;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.363);
+    font-size: 20px;
+}
+
+.title {
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.363);
+    padding-right: 40px;
+    font-size: 50px;
+}
+
+.buttonbox {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.pokemons {
+    display: grid;
+    grid-template-columns: 2fr 220px 2fr;
+}
+
+.pokemonCard {
+    grid-column: 2/3;
+    border: 5px solid yellow;
+    border-radius: 15px;
+    height: 300px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: rgba(165, 42, 42, 0.493);
+}
+
+.name_HP {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.HP {
+    grid-column: 3/4;
+}
+
+.plaatje {
+    width: 180px;
+    height: 180px;
+}
+
+.plaatjeBox {
+    justify-self: center;
+    border: 2px solid rgb(255, 217, 0);
+    background-color: rgba(157, 238, 238, 0.274);
+    border-radius: 5px;
+}
+
+p {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.name::first-letter {
+    text-transform: capitalize;
+}
+
+.pokemon::first-letter {
+    text-transform: capitalize;
+}
