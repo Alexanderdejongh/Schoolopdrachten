@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: darkgray;
+    font-family: 'Annie Use Your Telescope';
+}
+
+h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 52px;
+    background-color: black;
+    color: red;
+    text-shadow: 5px -5px 2px rgba(155, 14, 14, 0.253);
+}
+
+h2 {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 42px;
+    background-color: black;
+    color: red;
+    text-shadow: 5px -5px 2px rgba(155, 14, 14, 0.199);
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.Shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Winkelmand {
+    margin: 10px 50px 00 5px;
+}
+
+.Producten {
+    margin: 10px 5px 0 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 24px;
+    border-radius: 25px;
+    margin: 0 50px 10px 50px;
+    transition: all 500ms ease-in-out;
+}
+
+li:nth-child(odd) {
+    background-color: red;
+    color: black;
+    box-shadow: 5px -5px 2px rgba(155, 14, 14, 0.199);
+}
+
+li:nth-child(odd):hover {
+    background-color: black;
+    color: white;
+    letter-spacing: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 8px -8px 2px rgba(0, 0, 0, 0.199);
+}
+
+li:nth-child(even) {
+    background-color: black;
+    color: white;
+    box-shadow: 5px -5px 2px rgba(0, 0, 0, 0.199);
+}
+
+li:nth-child(even):hover {
+    background-color: red;
+    color: black;
+    letter-spacing: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 8px -8px 2px rgba(0, 0, 0, 0.199);
+}
+
+button {
+    padding: 10px;
+    letter-spacing: 1px;
+    background-color: black;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Annie Use Your Telescope';
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 5px -5px 2px rgba(0, 0, 0, 0.199);
+    transition: all 500ms ease-in-out;
+}
+
+button:hover {
+    font-size: 32px;
+    letter-spacing: 40px;
+}
