@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: darkgray;
+    font-family: 'Annie Use Your Telescope';
+}
+
+h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 52px;
+    background-color: black;
+    color: red;
+    text-shadow: 5px -5px 2px rgba(155, 14, 14, 0.253);
+}
+
+h2 {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 42px;
+    background-color: black;
+    color: red;
+    text-shadow: 5px -5px 2px rgba(155, 14, 14, 0.199);
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+i {
+    margin: 15px 0 0;
+    font-size: 24px;
+}
+
+form {
+    margin: 5px 20px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+form input {
+    text-align: center;
+    margin: 2px 20px;
+    font-size: 24px;
+    border-radius: 50px;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form button:hover {
+    letter-spacing: 0px;
+}
+
+form button i {
+    margin: 0;
+}
+
+div>i {
+    grid-column: 3/4;
+}
+
+.Shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Winkelmand {
+    margin: 10px 50px 00 5px;
+}
+
+.Producten {
+    margin: 10px 5px 0 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 5fr 2fr 0.5fr;
+    margin: 0 10px 10px 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.item p {
+    font-size: 24px;
+    padding: 10px;
+}
+
+li {
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 24px;
+    transition: all 200ms ease-out;
+}
+
+.item:hover>li {
+    letter-spacing: 25px;
+}
+
+.item:nth-child(odd) {
+    background-color: red;
+    color: black;
+    box-shadow: 5px -5px 2px rgba(155, 14, 14, 0.199);
+    border-radius: 25px;
+}
+
+.item:nth-child(odd):hover {
+    background-color: black;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 8px -8px 2px rgba(0, 0, 0, 0.199);
+}
+
+.item:nth-child(even) {
+    background-color: black;
+    color: white;
+    box-shadow: 5px -5px 2px rgba(0, 0, 0, 0.199);
+    border-radius: 25px;
+}
+
+.item:nth-child(even):hover {
+    background-color: red;
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 8px -8px 2px rgba(0, 0, 0, 0.199);
+}
+
+button {
+    padding: 10px;
+    letter-spacing: 1px;
+    background-color: black;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Annie Use Your Telescope';
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 5px -5px 2px rgba(0, 0, 0, 0.199);
+    transition: all 500ms ease-in-out;
+}
+
+button:hover {
+    font-size: 32px;
+    letter-spacing: 40px;
+}
