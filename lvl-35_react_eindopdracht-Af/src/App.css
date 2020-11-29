@@ -1,0 +1,318 @@
+:Root {
+    --MainColor: #16697a;
+    --SecondColor: #db6400;
+    --SecondColorLight: #d09463;
+    --textColorLight: #f8f1f1;
+    --textColorDark: #222831;
+    --BackgroundDark: #1a1c20;
+}
+
+.App {
+    text-align: center;
+    font-family: 'Bangers';
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+
+/* Header */
+
+.container__mainTitle {
+    font-family: 'Bungee Shade';
+    margin: 0;
+    background-color: var(--MainColor);
+    font-size: 44px;
+}
+
+.headerContainer {
+    padding: 10px 30px;
+    background-color: var(--MainColor);
+    text-align: center;
+}
+
+.headerForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 0.25fr 0.25fr;
+}
+
+.headerForm p {
+    margin: 0;
+    text-align: center;
+    color: var(--textColorDark);
+    letter-spacing: 2px;
+}
+
+input {
+    height: 26px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin: 0 10px 0 0;
+    width: 90%;
+    background-color: var(--SecondColor);
+    transition: all 300ms ease-in-out;
+}
+
+input:focus {
+    background-color: var(--textColorDark);
+    color: var(--textColorLight);
+    box-shadow: 2px 2px 2px var(--textColorDark);
+}
+
+select {
+    height: 26px;
+    font-size: 20px;
+    border-radius: 25px;
+    margin: 0 10px 0 0;
+    padding-right: 5%;
+    cursor: pointer;
+    width: 90%;
+    text-align-last: center;
+    background-color: var(--SecondColor);
+}
+
+.headerForButton {
+    margin-top: 15px;
+    padding: 2px;
+    border-radius: 15px;
+    background-color: var(--SecondColor);
+    transition: all 300ms ease-in-out;
+    font-size: 20px;
+}
+
+.headerForButton:hover {
+    background-color: var(--textColorDark);
+    color: var(--textColorLight);
+    box-shadow: 2px 2px 2px var(--textColorDark);
+    font-size: 22px;
+}
+
+.headerForButton:focus {
+    text-decoration: underline;
+}
+
+
+/* Navbar */
+
+.navBarContainer {
+    background-color: var(--MainColor);
+    padding: 0 5px;
+    margin: -10px 0 -5px 0;
+}
+
+.navBarBox {
+    padding: 0 15%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarBox a {
+    color: var(--textColorDark);
+    background-color: var(--SecondColor);
+    padding: 0 2%;
+    margin: 0 2%;
+    border: 2px solid var(--textColorDark);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.navBarBox a:focus {
+    text-decoration: underline;
+}
+
+.navBarBox a:hover {
+    background-color: var(--textColorDark);
+    border: 3px solid var(--SecondColor);
+    color: var(--textColorLight);
+    box-shadow: 2px 2px 2px var(--textColorDark);
+}
+
+.navBarBox a li {
+    padding: 4px;
+    font-size: 18px;
+    margin: 0 5%;
+    letter-spacing: 2px;
+}
+
+
+/* FilterSection  */
+
+.buttonsBox {
+    background-color: var(--MainColor);
+    padding: 0px 15% 5px 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filterButton {
+    background-color: var(--SecondColor);
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    transition: all 300ms ease-in-out;
+}
+
+.filterButton:hover {
+    background-color: var(--textColorDark);
+    color: var(--textColorLight);
+    box-shadow: 2px 2px 2px var(--textColorDark);
+}
+
+.filterButton:focus {
+    text-decoration: underline;
+}
+
+
+/* TracklistContainer */
+
+.tracklistContainer {
+    min-height: 100vh;
+    background-color: var(--BackgroundDark);
+    padding-bottom: 40px;
+}
+
+.tracklistTitle {
+    font-family: 'Bungee Shade';
+    margin: 0;
+    padding: 20px 0;
+    color: var(--textColorLight)
+}
+
+.tracklistbox {
+    margin: 0 15%;
+    min-height: 100vh;
+    border: 2px solid var(--SecondColor);
+    border-radius: 25px;
+}
+
+.tracklistitem {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 0.5fr 0.3fr;
+    border-bottom: 1px solid var(--SecondColor);
+}
+
+.Title_tracklistbox p:nth-child(odd) {
+    background-color: var(--textColorLight);
+    color: var(--textColorDark);
+}
+
+.Title_tracklistbox p:nth-child(even) {
+    background-color: var(--textColorDark);
+    color: var(--textColorLight);
+}
+
+.tracklistitem p {
+    padding: 8px;
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.first {
+    border-radius: 25px 0 0 0;
+}
+
+.last {
+    border-radius: 0 25px 0 0;
+}
+
+.item_tracklistbox p:nth-child(odd) {
+    background-color: var(--MainColor);
+    color: var(--textColorLight);
+    font-size: 18px;
+}
+
+.item_tracklistbox p:nth-child(even) {
+    border-top: 2px solid var(--textColorLight);
+    border-left: 2px solid var(--textColorDark);
+    background-color: var(--SecondColor);
+    color: var(--textColorDark);
+    font-size: 18px;
+}
+
+.tracklistitem button {
+    background-color: var(--MainColor);
+    color: var(--textColorLight);
+    padding: 0 5px;
+}
+
+.tracklistitem button i {
+    font-size: 22px;
+}
+
+
+/* About page */
+
+.aboutContainer {
+    margin: -27px 0 0 0;
+    background-color: var(--BackgroundDark);
+    min-width: 100vh;
+}
+
+.aboutTitle {
+    font-family: 'Bungee Shade';
+    color: var(--SecondColor);
+    font-size: 40px;
+}
+
+.aboutBoxTitle {
+    color: var(--textColorLight);
+    font-size: 28px;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+.aboutMeBox {
+    padding-bottom: 400px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.picture {
+    height: 680px;
+}
+
+.aboutMeTextBox {
+    background-color: var(--MainColor);
+    padding: 20px 0;
+}
+
+.aboutMeTextBox h4 {
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.aboutMeText {
+    color: var(--SecondColor);
+    letter-spacing: 1px;
+}
+
+p a {
+    color: var(--textColorDark);
+    text-decoration: underline;
+    font-size: 20px;
+}
